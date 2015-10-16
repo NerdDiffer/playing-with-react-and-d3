@@ -53,6 +53,5 @@ if (TARGET === 'start' || !TARGET) {
     plugins: [
       new webpack.HotModuleReplacementPlugin()
     ]
-  })
+  });
 }
-
