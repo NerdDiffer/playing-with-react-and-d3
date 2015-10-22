@@ -1,5 +1,4 @@
 var React       = require('react');
-var DataCircles = require('./DataCircles');
 var XYAxis      = require('./XYAxis');
 
 var Scatterplot = React.createClass({
@@ -10,10 +9,6 @@ var Scatterplot = React.createClass({
     var yScale = this.getYScale(props);
     return (
       <svg width={props.width} height={props.height}>
-        <DataCircles
-          xScale={xScale}
-          yScale={yScale}
-          {...props} />
         <XYAxis
           xScale={xScale}
           yScale={yScale}
