@@ -1,4 +1,4 @@
-h1 {
+h1, h2 {
   text-align: center;
 }
 
@@ -19,8 +19,9 @@ svg {
   font-size: 11px;
 }
 
-.controls button {
+.controls input {
   display: block;
   margin: 4em auto 4em auto;
+  text-align: center;
   background-color: 'aquawhite';
 }

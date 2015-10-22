@@ -1,33 +1,27 @@
 var React = require('react');
 var d3    = require('d3');
-var Scatterplot = require('./Scatterplot.jsx');
 
 var App = React.createClass({
+  getInitialState: function() {
+    return { n: 100 }
+  },
+
   render: function() {
     return (
       <div>
-        <h1>React and D3 are Friends.</h1>
-        <Scatterplot data={this.state.data} {...settings} />
+        <h1>Orders of Growth</h1>
+        { /*-- Chart goes here --*/ }
         <div className="controls">
-          <button className={'btn randomize'} onClick={this.randomizeData}>Randomize Data</button>
+          <h2>n = {this.state.n}</h2>
+          <input type="number" minimum="1" value={this.state.n} onChange={this.changeN} />
         </div>
       </div>
     )
   },
 
-  componentWillMount: function() {
-    this.randomizeData();
+  changeN: function(event) {
+    this.setState({ n: event.target.value });
   },
-
-  randomizeData: function() {
-    var randomData = [];
-    d3.range(settings.numDataPoints).forEach(function() {
-      var newNumber1 = Math.floor(Math.random() * settings.maxRange());
-      var newNumber2 = Math.floor(Math.random() * settings.maxRange());
-      randomData.push([newNumber1, newNumber2]);
-    });
-    this.setState({data: randomData});
-  }
 
 });
 
