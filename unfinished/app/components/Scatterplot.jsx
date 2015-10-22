@@ -1,6 +1,7 @@
 var React       = require('react');
 var DataCircles = require('./DataCircles');
 var XYAxis      = require('./XYAxis');
+
 var Scatterplot = React.createClass({
 
   render: function() {
