@@ -1,6 +1,6 @@
 var React = require('react');
 var d3    = require('d3');
-var ScatterPlot = require('./Scatterplot.jsx');
+var Chart = require('./Chart.jsx');
 var Orders = require('./Orders.js');
 
 var App = React.createClass({
@@ -13,7 +13,7 @@ var App = React.createClass({
     return (
       <div>
         <h1>Orders of Growth</h1>
-        <ScatterPlot points={this.state.points} n={currentN} {...settings} />
+        <Chart points={this.state.points} n={currentN} {...settings} />
         <div className="controls">
           <h2>n = { currentN } </h2>
           <input type="number" minimum="1" value={currentN} onChange={this.changeN} />

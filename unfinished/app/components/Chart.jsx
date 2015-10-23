@@ -2,7 +2,7 @@ var React  = require('react');
 var XYAxis = require('./XYAxis');
 var Lines  = require('./Lines');
 
-var Scatterplot = React.createClass({
+var Chart = React.createClass({
   render: function() {
     var props = this.props;
     var xScale = this.getXScale(props);
@@ -56,4 +56,4 @@ var Scatterplot = React.createClass({
 
 });
 
-module.exports = Scatterplot;
+module.exports = Chart;
